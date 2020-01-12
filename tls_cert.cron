@@ -1,0 +1,7 @@
+#
+# Regenerate the health status page at the top of every hour
+#
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+0 * * * * daemon go run /app/tls_check.go &>/dev/null
